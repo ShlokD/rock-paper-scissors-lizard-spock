@@ -1,0 +1,62 @@
+@import url("https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Barlow Semi Condensed", "sans-serif";
+}
+
+body {
+  background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+button {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+  border-width: 12px;
+  border-style: solid;
+  box-shadow: inset 2px 2px 8px gray;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+#Rock {
+  background-image: url("/icon-rock.b985d477.svg");
+  border-color: hsl(349, 70%, 56%);
+}
+
+#Paper {
+  background-image: url("/icon-paper.914d42b4.svg");
+  border-color: hsl(230, 89%, 65%);
+}
+
+#Scissors {
+  background-image: url("/icon-scissors.4dccb818.svg");
+  border-color: hsl(40, 84%, 53%);
+}
+
+#Lizard {
+  background-image: url("/icon-lizard.54688e43.svg");
+  border-color: hsl(261, 72%, 63%);
+}
+
+#Spock {
+  background-image: url("/icon-spock.0b9087be.svg");
+  border-color: hsl(189, 58%, 57%);
+}
+
+@media screen and (min-width: 768px) {
+  button {
+    height: 180px;
+    width: 180px;
+    border-width: 24px;
+  }
+}
+
+
+/*# sourceMappingURL=/app.bd0ef53c.css.map */
