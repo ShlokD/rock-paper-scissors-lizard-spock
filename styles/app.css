@@ -12,7 +12,7 @@ body {
   background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
-button {
+.game-button {
   background-repeat: no-repeat;
   background-position: center;
   height: 120px;
@@ -26,7 +26,7 @@ button {
 }
 
 #Rock {
-  background-image: url("../assets//icon-rock.svg");
+  background-image: url("../assets/icon-rock.svg");
   border-color: hsl(349, 70%, 56%);
 }
 
@@ -70,8 +70,14 @@ button {
   }
 }
 
+#rules {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media screen and (min-width: 768px) {
-  button {
+  .game-button {
     height: 180px;
     width: 180px;
     border-width: 24px;

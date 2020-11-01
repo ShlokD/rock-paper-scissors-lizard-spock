@@ -2,6 +2,10 @@ const createGame = () => {
   const app = document.querySelector("#app");
   const range = document.createRange();
 
+  const rulesToggle = document.querySelector("#rules-toggle");
+  const rulesClose = document.querySelector("#rules-close");
+  const rules = document.querySelector("#rules");
+
   const ROCK = "Rock";
   const PAPER = "Paper";
   const SCISSORS = "Scissors";
@@ -20,23 +24,18 @@ const createGame = () => {
   const table = {
     [ROCK]: {
       beats: toObj([LIZARD, SCISSORS]),
-      loses: toObj([SPOCK, PAPER]),
     },
     [PAPER]: {
       beats: toObj([SPOCK, ROCK]),
-      loses: toObj([SCISSORS, LIZARD]),
     },
     [SCISSORS]: {
       beats: toObj([PAPER, LIZARD]),
-      loses: toObj([ROCK, SPOCK]),
     },
     [LIZARD]: {
       beats: toObj([PAPER, SPOCK]),
-      loses: toObj([SCISSORS, ROCK]),
     },
     [SPOCK]: {
       beats: toObj([SCISSORS, ROCK]),
-      loses: toObj([PAPER, LIZARD]),
     },
   };
 
@@ -49,7 +48,7 @@ const createGame = () => {
     let template = `<div class="flex flex-row-l flex-column justify-around items-center pa4-l w-100 h-100">
     <div class="flex flex-column items-center justify-center w-33-l tc">
     <p class="f2 white b">You Picked</p>
-    <button id=${userSelection}></button>
+    <button class="game-button" id=${userSelection}></button>
     </div>
     <div class="flex flex-column-l flex-row items-center justify-center w-33-l appear-4">
         <p class="f2 white b ma2">${message}</p>
@@ -57,7 +56,7 @@ const createGame = () => {
     </div>
     <div class="flex flex-column items-center justify-center w-33-l tc appear">
         <p class="f2 white b">The House Picked</p>
-        <button id=${houseSelection}></button>
+        <button class="game-button" id=${houseSelection}></button>
     </div>
     </div>`;
     return template;
@@ -81,9 +80,16 @@ const createGame = () => {
     );
   };
 
+  const toggleRules = () => {
+    rules.classList.toggle("dn");
+  };
+
   document
-    .querySelectorAll("button")
+    .querySelectorAll(".game-button")
     .forEach((button) => button.addEventListener("click", onPlay));
+
+  rulesToggle.addEventListener("click", toggleRules);
+  rulesClose.addEventListener("click", toggleRules);
 };
 
 createGame();
