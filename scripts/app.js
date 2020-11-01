@@ -51,11 +51,11 @@ const createGame = () => {
     <p class="f2 white b">You Picked</p>
     <button id=${userSelection}></button>
     </div>
-    <div class="flex flex-column-l flex-row items-center justify-center w-33-l">
+    <div class="flex flex-column-l flex-row items-center justify-center w-33-l appear-4">
         <p class="f2 white b ma2">${message}</p>
         <a class="bg-white pa4 no-underline gray br4 b tc" href=".">Play Again</a>
     </div>
-    <div class="flex flex-column items-center justify-center w-33-l tc">
+    <div class="flex flex-column items-center justify-center w-33-l tc appear">
         <p class="f2 white b">The House Picked</p>
         <button id=${houseSelection}></button>
     </div>
