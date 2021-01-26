@@ -52,7 +52,7 @@ const createGame = () => {
     </div>
     <div class="flex flex-column-l flex-row items-center justify-center w-33-l appear-4">
         <p class="f2 white b ma2">${message}</p>
-        <a class="bg-white pa4 no-underline gray br4 b tc grow" href=".">Play Again</a>
+        <a class="bg-white pa4 no-underline gray br4 b tc grow f2 mt2" href=".">Play Again</a>
     </div>
     <div class="flex flex-column items-center justify-center w-33-l tc appear">
         <p class="f2 white b">The House Picked</p>
